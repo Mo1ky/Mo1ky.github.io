@@ -1,0 +1,35 @@
+@media screen and (min-width: 800px) {
+   #mobile_header{
+      display: none;
+      opacity: 0;
+   }
+   .toggle{
+      display: block;
+      opacity: 1;
+      pointer-events: 1;
+   }
+}
+@media screen and (max-width: 800px) {
+   .home{
+      padding-top: 5.025rem;
+   }
+   .toggle{
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+   }
+   .home .text{
+      padding: 20px 15px;
+   }
+   .home {
+      right: 0px;
+      left: 0px;
+      width: 100%;
+   }
+   .sidebar.close ~ .home {
+      right: 0px;
+      left: 0px;
+      height: 100vh;
+      width: 100%;
+   }
+}
