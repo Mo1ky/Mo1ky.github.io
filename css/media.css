@@ -8,6 +8,11 @@
       opacity: 1;
       pointer-events: 1;
    }
+   .close_mobile {
+      display: none;
+      opacity: 0;
+      pointer-events: 0;
+   }
 }
 @media screen and (max-width: 800px) {
    .home{
