@@ -61,6 +61,7 @@ body.dark{
 .sidebar .text{
     font-size: 16px;
     font-weight: 600;
+    
     white-space: nowrap;
     opacity: 1;
 }
@@ -79,6 +80,7 @@ body.dark{
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
     top: 0;
     height: 70px;
+    z-index: 1;
 }
 .center {
     padding: 0px 25px;
