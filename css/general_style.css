@@ -86,13 +86,13 @@ body.dark{
 }
 .mobile-title{
     font-size: 35px;
-	font-weight: 900;
+    font-weight: 900;
     margin-top: 15px;
     background-image: linear-gradient(to top, var(--primary-color),var(--text-color));
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    justify-content: center;
+    text-align: center;
     cursor: pointer;
 }
 .menu-box {
