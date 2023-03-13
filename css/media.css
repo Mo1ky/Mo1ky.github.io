@@ -13,6 +13,9 @@
    .home{
       padding-top: 5.025rem;
    }
+   #mobile_header{
+      z-index: 1;
+   }
    .title_general{
       font-size: 36px;
       align-items: center;
