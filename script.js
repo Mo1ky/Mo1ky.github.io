@@ -16,6 +16,8 @@ toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })
 /* =========================== */
+
+/* ===== Быстрое перемещение в начало ===== */
 var t;
 function up() {
     console.log("dasds")
@@ -26,50 +28,61 @@ function up() {
 	} else clearTimeout(t);
 	return false;
 }
+/* =========================== */
+
 /* ===== Переключение бокового меню на закрытое или открытое в мобильной версии ===== */
+var x = window.matchMedia("(max-width: 800px)")
 function myFunction(x) {
     if (x.matches) {
         sidebar.classList.add("mobile-close");
         sidebar.classList.remove("mobile-open");
-        mobiletoggle.addEventListener("click" , () =>{
+
+        mobiletoggle.addEventListener("click", () =>{
+            
             sidebar.classList.remove("close");
             sidebar.classList.remove("mobile-close");
             sidebar.classList.add('mobile-open');
+
             closemobile.addEventListener("click" , () =>{
                 sidebar.classList.remove("mobile-open");  
-                sidebar.classList.add("mobile-close");
-            }) 
-            general.addEventListener("click" , () =>{
+                sidebar.classList.add("mobile-close");   
+            })
+
+                general.addEventListener("click" , () =>{
                 sidebar.classList.remove("mobile-open");  
                 sidebar.classList.add("mobile-close");
-            }) 
+            })
         }) 
+       
 
     } 
+
     else {
         sidebar.classList.remove("mobile-close");
+        sidebar.classList.remove("mobile-open");
     }
     }
-    var x = window.matchMedia("(max-width: 800px)")
     myFunction(x) 
     x.addListener(myFunction)
-    /* ===========================*/
+/* ===========================*/
 
-    /* ===== Поиск ===== */ 
-    searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");}) 
-    /* =========================== */
+/* ===== Поиск ===== */ 
 
-    /* ===== Переключение темы ===== */
-    modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
+searchBtn.addEventListener("click" , () =>{
+sidebar.classList.remove("close");}) 
+/* =========================== */
 
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Светлая тема";
-    }
-    else{
-        modeText.innerText = "Тёмная тема";
-    }});
-    /* =========================== */
+/* ===== Переключение темы ===== */
+
+modeSwitch.addEventListener("click" , () =>{
+body.classList.toggle("dark");
+
+if(body.classList.contains("dark")){
+    modeText.innerText = "Светлая тема";
+}
+else{
+    modeText.innerText = "Тёмная тема";
+}});
+/* =========================== */
 
 
