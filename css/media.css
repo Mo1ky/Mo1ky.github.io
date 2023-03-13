@@ -13,6 +13,12 @@
       opacity: 0;
       pointer-events: 0;
    }
+   .mobile-open {
+      left: 0px;
+   }
+   .mobile-close {
+      left: 0px;
+   }
 }
 @media screen and (max-width: 800px) {
    .home{
@@ -22,9 +28,6 @@
    }
    body {
       padding-top: 5.025rem;
-   }
-   #mobile_header{
-      z-index: 2;
    }
    .title_general{
       font-size: 36px;
@@ -43,6 +46,7 @@
       opacity: 0;
       pointer-events: none;
    }
+   
    .home .text{
       padding: 15px 15px;
    }
