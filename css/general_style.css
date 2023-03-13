@@ -92,8 +92,8 @@ body.dark{
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    cursor: pointer;    
     text-align: center;
-    cursor: pointer;
 }
 .menu-box {
     border-radius: 6px;
