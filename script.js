@@ -31,7 +31,7 @@ function up() {
 /* =========================== */
 
 /* ===== Переключение бокового меню на закрытое или открытое в мобильной версии ===== */
-var x = window.matchMedia("(max-width: 800px)")
+var x = window.matchMedia("(max-width: 850px)")
 function myFunction(x) {
     if (x.matches) {
         sidebar.classList.add("mobile-close");
