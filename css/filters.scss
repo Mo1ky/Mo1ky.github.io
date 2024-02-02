@@ -1,0 +1,86 @@
+@import "import.scss";
+
+.types__filters {
+    padding-bottom: 1rem;
+}
+.filters__title {
+    text-align: left;
+    color: $color__text;
+    font-family: $fontHeading;
+    font-size: $fontSize;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    line-height: 105%;
+}
+.types__button {
+    outline: none;
+    background: $mainColor;
+    border: none;
+    border-radius: 30px;
+    font-size: $fontSize;
+    padding: 8px 15px;
+    margin-bottom: 2.5%;
+    color: #fff;
+    transition: all 0.35s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        background: #8d2c2c;
+        }
+    &:focus,
+    &:visited {
+        background: #732424;
+    }
+    
+    &:not(:last-child) {
+    margin-right: 0.5rem;
+    }
+}
+.types__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.types__row .block {
+    background-color: $color__lbg;
+    text-decoration: none;
+    width: 45%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    position: relative;
+    border-radius: 2%;
+    box-shadow: 0 0 1px 1px $mainColor;
+}
+.types__row .block__title {
+    text-align: center;
+    color: $color__text;
+    font-family: $fontHeading;
+    font-size: $fontSizeTitle;
+    font-weight: 600;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    line-height: 110%;
+    padding: 0 1rem;
+}
+
+.types__row .block__text {
+    text-align: center;
+    color: $color__text;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: 400;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    line-height: 110%;
+    padding: 0 1rem;
+}

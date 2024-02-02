@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+.types__filters {
+  padding-bottom: 1rem;
+}
+
+.filters__title {
+  text-align: left;
+  color: #fff;
+  font-family: "Verdana", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  line-height: 105%;
+}
+
+.types__button {
+  outline: none;
+  background: #c03d3d;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  padding: 8px 15px;
+  margin-bottom: 2.5%;
+  color: #fff;
+  transition: all 0.35s ease-in-out;
+}
+.types__button:hover {
+  cursor: pointer;
+  background: #8d2c2c;
+}
+.types__button:focus, .types__button:visited {
+  background: #732424;
+}
+.types__button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.types__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.types__row .block {
+  background-color: #3b3b3b;
+  text-decoration: none;
+  width: 45%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  position: relative;
+  border-radius: 2%;
+  box-shadow: 0 0 1px 1px #c03d3d;
+}
+
+.types__row .block__title {
+  text-align: center;
+  color: #fff;
+  font-family: "Verdana", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  line-height: 110%;
+  padding: 0 1rem;
+}
+
+.types__row .block__text {
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  line-height: 110%;
+  padding: 0 1rem;
+}/*# sourceMappingURL=filters.css.map */

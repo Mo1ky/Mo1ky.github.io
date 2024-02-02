@@ -1,0 +1,200 @@
+// Подключение файлов стилей ===========================================================================================================================================================================================================================================================================
+@import "null.scss";
+@import "import.scss";
+
+html, body {
+    min-width: 320px;
+}
+body {
+    color: $color__text;
+    line-height: 1;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $color__bg;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // Прижимаем footer
+    > main {
+        flex: 1 1 auto;
+    }
+    // Фикс для слайдеров
+    > * {
+        min-width: 0;
+    }
+}
+.center {
+    max-width: 1400px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    &.main-index {
+        max-width: 920px;
+    }
+}
+.page {
+    display:flex;
+    justify-content:center;
+    &.login {
+        align-items:center;
+        justify-content:center;
+    }
+}
+.exit_form {
+    padding:50px 0;
+    max-width:450px;
+    min-height:450px;
+    padding:20% 50px;
+    border-radius:10px;
+    //box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+    --elevation: 30;
+    box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, calc(.11 * (2 - var(--background-luminance, 1)))), 0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px)) rgba(0, 0, 0, calc(.13 * (2 - var(--background-luminance, 1))));
+    background-color: $color__lbg;
+    margin-left: auto;
+    margin-right: auto;
+    form {
+        margin-top: 20px;
+        height: 100%;
+    }
+    .form-group {
+        color: $color__text;
+        font-family: $fontFamily;
+        font-weight: 700;
+        padding: 10px 5px 10px 5px;
+        display: flex;
+        >button {
+            margin-left: auto;
+            margin-right: auto;
+            color: $color__text;
+            background-color: $mainColor;
+            font-size: $fontSize;
+            width: 60%;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 30px;
+        }
+        
+        >input {
+            box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: $color__text;
+            color: $color__darktext;
+            font-size: $fontSize;
+            font-family: $fontFamily;
+            padding: 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 5px;
+            transition: border-color 0.3s ease-in-out;
+            outline: none;
+            border: 2px solid #ddd; /* Border color input */
+        }
+        input:focus {
+            border-color: $mainColor; /* Warna input saat focus */
+          }
+    }
+}
+
+.title {
+    margin-bottom: 10px;
+    text-align: center;
+    color: $color__text;
+    font-family: $fontHeading;
+    font-weight: 700;
+    font-size: $fontSizeTitle;
+    letter-spacing: 3px;
+}
+/********** Модальные окна **********/
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 34;
+    background: rgba(59, 59, 59, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 0 5% 0;
+}
+.popup.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup.open .popup__content {
+    transform: translate(0, 0);
+}
+
+.popup__body {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5% 15px 0 15px;
+}
+
+.popup__content {
+    background-color: $color__lbg;
+    max-width: 1100px;
+    padding: 0.5rem 2rem 2rem;
+    border-radius: 8px;
+    position: relative;
+    transform: translate(0, -100%);
+    transition: all 0.4s ease-in-out;
+}
+
+.popup__info p {
+    text-indent: 0.5rem;
+    text-align: justify;
+}
+
+.popup__middle {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+
+.popup__img {
+    flex: 0 1 40%;
+    box-shadow: 2px 2px 5px 5px rgba(60, 60, 60, 0.25);
+    border-radius: 5px;
+    min-height: 200px;
+    margin-bottom: 25px;
+}
+
+.popup__info {
+    flex: 0 1 58%;
+}
+
+.popup__header {
+    margin-bottom: 1rem;
+    margin-top: 1.8rem;
+    line-height: 1.8rem;
+}
+
+.popup__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: $color__text;
+    & i {
+        font-size: 2.5rem;
+    }
+}
+/*-------*/
+
+body.lock {
+    overflow: hidden;
+}
