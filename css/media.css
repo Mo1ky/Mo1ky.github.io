@@ -35,9 +35,6 @@
   html {
     font-size: 12px;
   }
-  .types__row .block {
-    width: 48%;
-  }
 }
 @media (max-width: 640px) {
   .places__row {
@@ -59,13 +56,11 @@
   .types__header {
     font-size: 25px;
   }
-}
-@media screen and (max-width: 425px) {
+  .types__row .block__info {
+    top: 37%;
+  }
   .types__row .block {
     width: 100%;
-  }
-  .types__row .block__text {
-    top: 35%;
   }
 }
 @media screen and (max-width: 340px) {
@@ -75,11 +70,6 @@
   .foot-header {
     font-size: 1rem;
     align-items: center;
-  }
-}
-@media (max-width: 330px) {
-  .types__row .block {
-    max-height: 165px;
   }
 }
 @media (min-width: 639.98px) {

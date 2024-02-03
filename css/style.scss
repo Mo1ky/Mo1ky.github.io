@@ -16,6 +16,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: $color__bg;
+    &.lock {
+        overflow: hidden;
+    }
 }
 .wrapper {
     min-height: 100%;
@@ -39,14 +42,13 @@ body {
         max-width: 920px;
     }
 }
-.page {
+.login {
     display:flex;
     justify-content:center;
-    &.login {
-        align-items:center;
-        justify-content:center;
+    align-items:center;
+    justify-content:center;
     }
-}
+
 .exit_form {
     padding:50px 0;
     max-width:450px;
@@ -144,7 +146,12 @@ body {
     flex-direction: column;
     padding: 5% 15px 0 15px;
 }
-
+.popup__title {
+    font-family: $fontHeading;
+    font-size: $fontSizeTitle;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
 .popup__content {
     background-color: $color__lbg;
     max-width: 1100px;
@@ -176,25 +183,43 @@ body {
 
 .popup__info {
     flex: 0 1 58%;
+    
 }
 
 .popup__header {
     margin-bottom: 1rem;
     margin-top: 1.8rem;
     line-height: 1.8rem;
+    font-size: $fontHeading;
 }
 
 .popup__close {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.3rem;
     color: $color__text;
     & i {
         font-size: 2.5rem;
     }
 }
 /*-------*/
-
-body.lock {
-    overflow: hidden;
+.title {
+    text-align: center;
+    color: $color__text;
+    font-family: $fontHeading;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 2.8rem;
+    font-size: 36px;
+    line-height: 110%;
+    letter-spacing: 3px;
+}
+.login__title {
+    text-align: center;
+    color: $color__text;
+    font-weight: 700;
+    font-size: $fontSizeTitle;
+    line-height: 110%;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }

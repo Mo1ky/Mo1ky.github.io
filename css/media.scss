@@ -32,15 +32,14 @@ html {
     display: none;
     opacity: 0;
 }
+
 }
 @media all and (max-width: 860px){
 html {
     font-size: 12px;
 }
 
-.types__row .block {
-    width: 48%;
-}
+
 }
 
 
@@ -49,6 +48,7 @@ html {
     grid-template-columns: 1fr;
     row-gap: 25px;
 }
+
 }
 @media (max-width: 600px) {
 
@@ -63,18 +63,18 @@ html {
 
 }
 @media (max-width: 500px) {
-.types__header {
-    font-size: 25px;
-}
-
-}
-@media screen and (max-width: 425px) {
+    .types__header {
+        font-size: 25px;
+    }
+    .types__row .block__info {
+        top:37%;
+    }
     .types__row .block {
         width: 100%;
+    }
 }
-.types__row .block__text {
-    top:35%;
-}
+@media screen and (max-width: 425px) {
+
 }
 @media screen and (max-width: 340px) {
 .site-title {
@@ -85,12 +85,7 @@ html {
     align-items: center;
 }
 }
-@media (max-width: 330px) {
 
-.types__row .block {
-    max-height: 165px;
-}
-}
 // Модальное окно ===========================================================================================================================================================================================================================================================================
 
 @media(min-width: 639.98px) {
