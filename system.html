@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/filters.css">
     <link rel="stylesheet" href="css/media.css">
-    
 </head>
     <body>
         <div class="wrapper">
-
         <main class="page">
             <div class="center main-index">
                 <div class="types">
                 <div class="title">
                     Объекты
+                </div>
+                <div class="search_input">
+                    <input type="text" id="input_sr" placeholder="Искать здесь...">
                 </div>
                 <div class="types__filters">
                     <h2 class="filters__title">Фильтры:</h2>
@@ -366,12 +367,14 @@
         </div>
         </div> -->
         </div>
-    <script src="js/card.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js" async></script>
     <script src="js/mixitup.min.js"></script>
+    <script src="js/filters.js"></script>
+    
+    <script src="js/card.js"></script>
     <script>      
         var mixer = mixitup(".types__row");
     </script>
+    <script src="js/main.js" async></script>
     </body>
 </html>

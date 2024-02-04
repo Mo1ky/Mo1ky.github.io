@@ -152,7 +152,7 @@ body {
     font-size: $fontSizeTitle;
     line-height: 2.1rem;
     font-weight: 600;
-    max-width: 400px;
+    max-width: 350px;
 }
 .popup__content {
     background-color: $color__lbg;
@@ -162,6 +162,7 @@ body {
     position: relative;
     transform: translate(0, -100%);
     transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 1px 1px #c03d3d;
 }
 
 .popup__info p {

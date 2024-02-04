@@ -30,6 +30,9 @@
     display: none;
     opacity: 0;
   }
+  .popup__title {
+    max-width: 250px;
+  }
 }
 @media all and (max-width: 860px) {
   html {
@@ -40,6 +43,9 @@
   .places__row {
     grid-template-columns: 1fr;
     row-gap: 25px;
+  }
+  .popup__body {
+    padding: 10% 15px 0 15px;
   }
 }
 @media (max-width: 600px) {

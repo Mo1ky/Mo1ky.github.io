@@ -45,7 +45,7 @@
     width: 45%;
     height: 320px;
     overflow: hidden;
-    margin-bottom: 2%;
+    margin-bottom: 15px;
     margin-right: 2%;
     position: relative;
     border-radius: 2%;
@@ -95,4 +95,33 @@
     top: 0;
     z-index: 1;
     transition: all 0.35s ease;
+}
+/*Поиск*/
+.search_input {
+    width: auto;
+    text-align: center;
+    margin: 0 0 15px;
+    & input {
+        border: 2px solid #ddd;
+        width: 280px;
+        height: 42px;
+        padding-left: 15px;
+        border-radius: 30px;
+        background-color: $color__text;
+        font-size: 1rem;
+        outline: none;
+        position: relative;
+        transition: .3s linear;
+    }
+    & input:focus {
+        width: 250px;
+        }
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    & input:focus {
+        border-color: #c03d3d;
+    }
 }
