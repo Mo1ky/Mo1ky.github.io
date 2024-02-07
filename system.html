@@ -9,16 +9,17 @@
     <link rel="shortcut icon" href="icon/favicon.ico">
     <title>Система</title>
     <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/general_style.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/media_sidebar.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/filters.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.mixitup-2.1.11.js"></script>
+    <script src="js/mixitup.min.js"></script>
 </head>
 
 <body class>
     <nav class="sidebar close">
-
         <header>
             <div class="image-text">
                 <span class="image">
@@ -26,7 +27,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">Система</span>
+                    <span class="name">ИС "М.О.П.С."</span>
                     <span class="profession"></span>
 
                     <div class="close_mobile">
@@ -47,7 +48,7 @@
                 </ul>
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="./system.html">
                             <i class="fa-regular fa-building icon"></i>
                             <span class="text nav-text">Объекты</span>
                         </a>
@@ -60,16 +61,59 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#documentation">
-                            <i class="fa-solid fa-hammer icon"></i>
-                            <span class="text nav-text">Мастера</span>
+                        <a href="./users.html">
+                            <i class="fa-regular fa-user icon"></i>
+                            <span class="text nav-text">Пользователи</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="bottom-content">
-
+                <li>
+                    <a href="#popup-new-user" class="popup-link">
+                        <i class="fa-solid fa-plus icon"></i>
+                        <span class="text nav-text">Добавить<br>пользователя</span>
+                    </a>
+                </li>
+                <div id="popup-new-user" class="popup">
+                    <div class="popup__body">
+                        <div class="popup__content">
+                            <div class="popup__header">
+                                <h1 class="popup__title">Новый<br>пользователь</h1>
+                                <a href="#" class="popup__close close-popup">
+                                    <i class="fa fa-solid fa-xmark" alt="Закрыть модальное окно"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="popup__info">
+                                <form action="" method="get">
+                                    <div class="form-group">
+                                       <input class="form-control item" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Логин" id="new_username" required>
+                                    </div>
+                                    <div class="form-group">
+                                       <input class="form-control item" type="password" name="password" minlength="6" id="new_password" placeholder="Пароль" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <ul>
+                                            <li><input type="radio" id="rolesChoice1" name="roles" value="email" /><label for="rolesChoice1">
+                                        <span>Администратор</span></label></li>
+                                            <li><input type="radio" id="rolesChoice2" name="roles" value="phone" /><label for="rolesChoice2">
+                                        <span>Заказчик</span></label></li>
+                                            <li><input type="radio" id="rolesChoice3" name="roles" value="mail" /><label for="rolesChoice3">
+                                        <span>Мастер</span></label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="popup__footer popup__info">
+                                       <button class="btn " type="submit" >Создать</button>
+                                       <!-- <i class="fa-solid fa-spinner fa-spin"></i> -->
+                                    </div>
+                              </form>
+                            </div>
+                    
+                    </div>
+                </div>
+                </div>
                 <li class="mode">
                     <div class="sun-moon">
                         <i class="fa-regular fa-moon icon moon"></i>
@@ -91,7 +135,7 @@
                     <i class="fa-solid fa-bars mobile-toggle"></i>
                 </div>
                 <div class="mobile-title">
-                    Система
+                    ИС "М.О.П.С."
                 </div>
 
             </div>
@@ -99,7 +143,6 @@
                     <div class="title">
                         Объекты
                     </div>
-                    <div class="types">
                     <div class="search_input">
                         <input type="text" id="input_sr" placeholder="Искать здесь...">
                     </div>
@@ -116,8 +159,8 @@
                         <button type="button" class="types__button" data-filter=".f-other">Прочее</button>
                         
                     </div>
-                    <div class="types__row" id="MixItUp823A7">
-                        <a href="#popup-1" class="types__block block mix popup-link f-kindergarten">
+                    <div class="types__row">
+                        <a href="#popup-1" class="search_object types__block block mix popup-link f-kindergarten">
                             <h2 class="block__title">Детский сад № 74 "ВИННИ&nbsp;-&nbsp;ПУХ"</h2>
                             <div class="block__info">
                                 <p>Адрес: <span>корп. А, просп. Морской, 37, Северодвинск</span></p>
@@ -197,7 +240,7 @@
                             </div>
                         </div>
                         </div>
-                        <a href="#popup-2" class="types__block block mix popup-link f-school">
+                        <a href="#popup-2" class="search_object types__block block mix popup-link f-school">
                             <h2 class="block__title">МАОУ СОШ № 23</h2>
                             <div class="block__info">
                                 <p>Адрес: <span>пр. Труда, 14А, Северодвинск</span></p>
@@ -276,7 +319,7 @@
                             </div>
                         </div>
                         </div>
-                        <a href="#popup-3" class="types__block block mix popup-link f-hospital">
+                        <a href="#popup-3" class="search_object types__block block mix popup-link f-hospital">
                             <h2 class="block__title">Городская больница № 1</h2>
                             <div class="block__info">
                                 <p>Адрес: <span>ул. Ломоносова, 47, Северодвинск</span></p>
@@ -355,7 +398,7 @@
                             </div>
                         </div>
                         </div>
-                        <a href="#popup-4" class="types__block block mix popup-link f-school">
+                        <a href="#popup-4" class="search_object types__block block mix popup-link f-school">
                             <h2 class="block__title">Гуманитарная гимназия № 8</h2>
                             <div class="block__info">
                                 <p>Адрес: <span>ул. Торцева, 12, Северодвинск</span></p>
@@ -435,16 +478,12 @@
                         </div>
                         </div>
                     </div>
-                </div>
             </div>
         </main>
     </section>
 
 </body>
-
-<script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/mixitup.min.js"></script>
 <script src="js/accordion.js"></script>
 <script src="js/card.js"></script>
 <script>      

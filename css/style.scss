@@ -56,52 +56,53 @@ body.lock {
     //box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
     --elevation: 30;
     box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, calc(.11 * (2 - var(--background-luminance, 1)))), 0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px)) rgba(0, 0, 0, calc(.13 * (2 - var(--background-luminance, 1))));
-    background-color: $color__lbg;
+    background-color: var(--sidebar-color);
     margin-left: auto;
     margin-right: auto;
+    color: var(--text-color);
     form {
         margin-top: 20px;
         height: 100%;
     }
-    .form-group {
-        color: $color__text;
-        font-family: $fontFamily;
-        font-weight: 700;
-        padding: 10px 5px 10px 5px;
-        display: flex;
-        >button {
-            margin-left: auto;
-            margin-right: auto;
-            color: $color__text;
-            background-color: $mainColor;
-            font-size: $fontSize;
-            width: 60%;
-            border-radius: 10px;
-            padding: 5px;
-            margin-top: 30px;
-        }
-        
-        >input {
-            box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
-            background-color: $color__text;
-            color: $color__darktext;
-            font-size: $fontSize;
-            font-family: $fontFamily;
-            padding: 10px;
-            border-radius: 10px;
-            box-sizing: border-box;
-            width: 100%;
-            padding: 5px;
-            transition: border-color 0.3s ease-in-out;
-            outline: none;
-            border: 2px solid #ddd; /* Border color input */
-        }
-        input:focus {
-            border-color: $mainColor; /* Warna input saat focus */
-          }
-    }
 }
 
+.form-group {
+  color: $color__text;
+  font-family: $fontFamily;
+  font-weight: 700;
+  padding: 10px 5px 10px 5px;
+  display: flex;
+  >button {
+      margin-left: auto;
+      margin-right: auto;
+      color: $color__text;
+      background-color: $mainColor;
+      font-size: $fontSize;
+      width: 60%;
+      border-radius: 10px;
+      padding: 5px;
+      margin-top: 30px;
+  }
+  
+  >input {
+      box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+      background-color: $color__text;
+      color: $color__darktext;
+      font-size: $fontSize;
+      font-family: $fontFamily;
+      padding: 10px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 5px;
+      transition: border-color 0.3s ease-in-out;
+      outline: none;
+      border: 2px solid #ddd; /* Border color input */
+  }
+  input:focus {
+      border-color: $mainColor; /* Warna input saat focus */
+    }
+}
 .title {
     margin-bottom: 10px;
     text-align: center;
@@ -117,124 +118,9 @@ body.lock {
     letter-spacing: 3px;
 }
 
-
-/********** Модальные окна **********/
-.popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 34;
-    background: rgba(59, 59, 59, 0.6);
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 0 0 5% 0;
-    &.open {
-    visibility: visible;
-    opacity: 1;
-    }
-    &.popup__content {
-    transform: translate(0, 0);
-}
-}
-.popup__body {
-    display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 5% 15px 0 15px;
-}
-.popup__title {
-    font-family: $fontHeading;
-    font-size: $fontSizeTitle;
-    line-height: 2.1rem;
-    font-weight: 600;
-    max-width: 350px;
-}
-.popup__content {
-    background-color: $color__lbg;
-    max-width: 1100px;
-    padding: 0.5rem 2.5rem 2rem;
-    border-radius: 8px;
-    position: relative;
-    transform: translate(0, -100%);
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0 0 1px 1px #c03d3d;
-}
-
-
-.popup__middle {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-}
-
-.popup__img {
-    flex: 0 1 40%;
-    box-shadow: 2px 2px 5px 5px rgba(60, 60, 60, 0.25);
-    border-radius: 5px;
-    min-height: 200px;
-    margin-bottom: 25px;
-}
-
-.popup__info {
-    flex: 0 1 58%;
-    & p {
-    text-indent: 0.5rem;
-    text-align: justify;
-}
-}
-
-.popup__header {
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    line-height: 1.8rem;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-.popup__footer {
-    display:flex;
-    margin-bottom: 15px;
-    & button {
-    margin-left: auto;
-    margin-right: auto;
-    color: $color__text;
-    background-color: $mainColor;
-    font-size: $fontSize;
-    width: 60%;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 30px;   
-    transition: all 0.35s ease-in-out; 
-    }
-    & button:hover {
-        cursor: pointer;
-        background: $mainColor2;
-    }
-}
-.popup__close {
-    position: absolute;
-    top: 1rem;
-    right: 1.3rem;
-    color: $color__text;
-    & i {
-        font-size: 2.2rem;
-    }
-}
-/*-------*/
-
 .login__title {
     text-align: center;
-    color: $color__text;
+    color: var(--text-color);
     font-weight: 700;
     font-size: $fontSizeTitle;
     line-height: 110%;
@@ -252,11 +138,8 @@ td {
         background: none;
     }
 }
-.center {
-  max-width: 1400px;
-  padding: 0px 15px;
-  margin: 0 auto;
-}
+
+
 .center.main-index {
   max-width: 920px;
 }
@@ -266,59 +149,6 @@ td {
   justify-content: center;
   align-items: center;
   justify-content: center;
-}
-
-.exit_form {
-  padding: 50px 0;
-  max-width: 450px;
-  min-height: 450px;
-  padding: 20% 50px;
-  border-radius: 10px;
-  --elevation: 30;
-  box-shadow: 0 0 calc(var(--elevation) * 0.225px + 2px) rgba(0, 0, 0, calc(0.11 * (2 - var(--background-luminance, 1)))), 0 calc(var(--elevation) * 0.4px) calc(var(--elevation) * 0.9px) rgba(0, 0, 0, calc(0.13 * (2 - var(--background-luminance, 1))));
-  background-color: #3b3b3b;
-  margin-left: auto;
-  margin-right: auto;
-}
-.exit_form form {
-  margin-top: 20px;
-  height: 100%;
-}
-.exit_form .form-group {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  padding: 10px 5px 10px 5px;
-  display: flex;
-}
-.exit_form .form-group > button {
-  margin-left: auto;
-  margin-right: auto;
-  color: #fff;
-  background-color: #c03d3d;
-  font-size: 1.3rem;
-  width: 60%;
-  border-radius: 10px;
-  padding: 5px;
-  margin-top: 30px;
-}
-.exit_form .form-group > input {
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  color: rgb(59, 59, 59);
-  font-size: 1.3rem;
-  font-family: "Roboto", sans-serif;
-  padding: 10px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
-  transition: border-color 0.3s ease-in-out;
-  outline: none;
-  border: 2px solid #ddd; /* Border color input */
-}
-.exit_form .form-group input:focus {
-  border-color: #c03d3d; /* Warna input saat focus */
 }
 
 
@@ -367,7 +197,7 @@ td {
 }
 
 .popup__content {
-  background-color: #3b3b3b;
+  background-color: var(--sidebar-color);
   max-width: 1100px;
   padding: 0.5rem 2.5rem 2rem;
   border-radius: 8px;
@@ -375,11 +205,6 @@ td {
   transform: translate(0, -100%);
   transition: all 0.4s ease-in-out;
   box-shadow: 0 0 1px 1px #c03d3d;
-}
-
-.popup__info p {
-  text-indent: 0.5rem;
-  text-align: justify;
 }
 
 .popup__middle {
@@ -398,6 +223,23 @@ td {
 
 .popup__info {
   flex: 0 1 58%;
+  & p {
+    text-indent: 0.5rem;
+    text-align: justify;
+  }
+  & .form-group {
+    padding: 15px 10% 15px 10%;
+    color: var(--text-color);
+  }
+  & .form-group li{
+    margin-top: 0px;
+  }
+  & .form-group input[type=radio] {
+    margin-right: 10px;
+    accent-color: $mainColor;
+    display: flex;
+    flex-flow: column wrap;
+  }
 }
 
 .popup__header {
@@ -430,7 +272,7 @@ td {
 }
 & button:hover {
   cursor: pointer;
-  background: #050505;
+  background: $mainColor2;
 }
 }
 
@@ -438,24 +280,13 @@ td {
   position: absolute;
   top: 1rem;
   right: 1.3rem;
-  color: #fff;
+  color: var(--text-color);
   & i {
   font-size: 2.2rem;
 }
 }
 
 /*-------*/
-
-
-.login__title {
-  text-align: center;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 110%;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
 
 /*Таблицы*/
 td {
