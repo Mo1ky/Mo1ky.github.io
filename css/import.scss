@@ -9,18 +9,42 @@ $fontSizeTitle: 1.8rem; // где 18(px) - размер шрифта по умо
 
 // Основные цвета
 $mainColor: #c03d3d; // Цвет шрифта по умолчанию
-$mainColor2: #8d2c2c; // Цвет шрифта более тёмный
+$mainColor2: #050505; // Цвет шрифта более тёмный
 $mainColor3: rgb(115, 36, 36); // Цвет шрифта более тёмный
 $color__bg:#242424; //Цвет фона
 $color__lbg:#3b3b3b; //Более светлый цвет фона
 $color__text:#fff; //Цвет шрифта
 $color__darktext:rgb(59, 59, 59); //Цвет шрифта темный
-body .dark {
-    $mainColor: #c03d3d; // Цвет шрифта по умолчанию
-    $mainColor2: #8d2c2c; // Цвет шрифта более тёмный
-    $mainColor3: rgb(115, 36, 36); // Цвет шрифта более тёмный
-    $color__bg:#fff; //Цвет фона
-    $color__lbg:#3b3b3b; //Более светлый цвет фона
-    $color__text:#3b3b3b;; //Цвет шрифта
-    $color__darktext:rgb(59, 59, 59); //Цвет шрифта темный
+
+/* ===== Инициализация переменных ===== */
+:root {
+/* ===== Цвета ===== */
+--body-color: #e8e8e8;
+--sidebar-color: #FFF;
+--flosted-glass:rgba(255,255,255, 0.6);
+--flosted-glass-sidebar:rgba(255,255,255, 0.95);
+--primary-color: #c03d3d;
+--primary-color-light: #e6e6ea;
+--toggle-color: #DDD;
+--text-color: #2c2c2c;
+--text-color-title: #7e7c7c;
+
+/* ====== Transition ====== */
+
+--tran-03: all 0.2s ease;
+--tran-03: all 0.3s ease;
+--tran-04: all 0.3s ease;
+--tran-05: all 0.3s ease;
+}
+body.dark {
+--body-color: #242424;
+--sidebar-color: #3b3b3b;
+
+--flosted-glass:rgba(36,34,38, 0.5);
+--flosted-glass-sidebar:rgba(36,34,38, 0.95);
+--primary-color: #c03d3d;
+--primary-color-light: #3a3b3c;
+--toggle-color: #fff;
+--text-color: #d8d8d8;
+--text-color-title: #ccc;
 }
