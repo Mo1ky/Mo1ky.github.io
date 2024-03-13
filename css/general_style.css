@@ -1,0 +1,1169 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Google Font импорт - Montserrat Alegreya */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&family=Montserrat:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+div {
+  scrollbar-width: none;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  /*
+  background-color: ;
+  */
+  background-image: var(--body-color);
+  -webkit-transition: var(--tran-05);
+  -o-transition: var(--tran-05);
+  transition: var(--tran-05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+/* ===== Инициализация переменных ===== */
+:root {
+
+  /* ===== Цвета ===== */
+
+  --body-color: linear-gradient(90deg, #6983b5,#879cc4,#aebcd6);
+  --sidebar-color: #FFF;
+  --flosted-glass:rgba(255,255,255, 0.6);
+  --flosted-glass-sidebar:rgba(255,255,255, 0.95);
+  --primary-color: #85957a;
+  --primary-color-light: #e6e6ea;
+  --toggle-color: #DDD;
+  --text-color: #6b6b6b;
+  --text-color-title: #7e7c7c;
+
+  /* ====== Transition ====== */
+
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+body.dark {
+  --body-color: linear-gradient(90deg, #353a5f, #4e5782, #6877a6, #8398cc, #9ebaf3);
+
+  --sidebar-color: #2a2c2e;
+  --flosted-glass:rgba(36,34,38, 0.5);
+  --flosted-glass-sidebar:rgba(36,34,38, 0.95);
+  --primary-color: #85957a;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #d8d8d8;
+  --text-color-title: #ccc;
+}
+
+/* ===== Многоразовый код===== */
+.general {
+  height: 100%;
+}
+
+.sidebar li {
+  height: 50px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+  min-width: 60px;
+  border-radius: 10px;
+}
+
+.sidebar .icon {
+  min-width: 60px;
+  border-radius: 10px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+  color: var(--text-color);
+  -webkit-transition: var(--tran-03);
+  -o-transition: var(--tran-03);
+  transition: var(--tran-03);
+}
+
+.sidebar .text {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.sidebar.close .text {
+  opacity: 0;
+}
+
+/* =========================== */
+
+/* ======  Мобильный header ====== */
+#mobile_header {
+  width: 100%;
+  background-color: var(--sidebar-color);
+  position: fixed;
+  -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
+  top: 0;
+  height: 70px;
+  z-index: 2;
+}
+
+.mobile-title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-top: 15px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color)), to(var(--text-color-title)));
+  background-image: -o-linear-gradient(bottom, var(--primary-color), var(--text-color-title));
+  background-image: linear-gradient(45deg, var(--primary-color) 15%, var(--text-color-title));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+  text-align: center;
+}
+
+.menu-box {
+  border-radius: 10px;
+  background-color: var(--primary-color-light);
+  color: var(--text-color);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    */
+}
+
+.close_mobile {
+  border-radius: 10px;
+  background-color: var(--primary-color-light);
+  color: var(--text-color);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  position: absolute;
+  left: 248px;
+  top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    */
+}
+
+.mobile-close {
+  left: -300px;
+}
+
+.mobile-open {
+  left: 0;
+}
+
+/* ======  Основная страница ====== */
+.home {
+  position: absolute;
+  display: block;
+  top: 0;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  /*
+  background-color: var(--body-color);
+  */
+  
+  -webkit-transition: var(--tran-05);
+  
+  -o-transition: var(--tran-05);
+  
+  transition: var(--tran-05);
+  z-index: 1;
+}
+
+.home .text {
+  font-size: 18px;
+  font-weight: 500;
+  word-wrap: break-word;
+  color: var(--text-color);
+  padding: 15px 50px;
+}
+
+body.dark .home .text {
+  color: var(--text-color);
+}
+
+.text p {
+  line-height: 1.5rem;
+  padding-left: 15px;
+}
+
+.sidebar.close~.home {
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 78px);
+}
+
+
+/* ===== Стилизация контента ===== */
+
+.title_general {
+  font-size: 60px;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color)), to(var(--text-color-title)));
+  background-image: -o-linear-gradient(bottom, var(--primary-color), var(--text-color-title));
+  background-image: linear-gradient(45deg, var(--primary-color) 15%, var(--text-color-title));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.title_info {
+  font-size: 36px;
+  padding: 10px 15px;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color)), to(var(--text-color-title)));
+  background-image: -o-linear-gradient(bottom, var(--primary-color), var(--text-color-title));
+  background-image: linear-gradient(45deg, var(--primary-color) 15%, var(--text-color-title));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.widget_info {
+  border-radius: 15px;
+  padding: 12px;
+  
+  background-color: var(--sidebar-color);
+  -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
+  /*
+  background: var(--sidebar-colo);
+  backdrop-filter: blur(40px);
+  border: 2px solid transparent;
+  box-shadow: 8px 8px 12px rgba(0,0,0,10%);
+  */
+}
+.widget_info_title {
+  border-radius: 15px;
+  padding: 15px;
+  background: var(--flosted-glass);
+  -webkit-backdrop-filter: blur(43px);
+          backdrop-filter: blur(43px);
+  border: 2px solid transparent;
+  -webkit-box-shadow: 8px 8px 12px rgba(0,0,0,10%);
+          box-shadow: 8px 8px 12px rgba(0,0,0,10%);
+  -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+td {
+  padding-left: 15px;
+  padding-bottom: 7px;
+  word-wrap: break-all;
+
+}
+
+/* =========================== */
+/* ===== Галерея ===== */
+/*!
+ * baguetteBox.js
+ * @author  feimosi
+ * @version 1.11.0
+ * @url https://github.com/feimosi/baguetteBox.js
+ */
+
+.lightbox-group img {
+  margin: 10px;
+  margin: 10px;
+  border: solid;
+  border-radius: 10px;
+  border-color: var(--primary-color);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  /* Время эффекта */
+}
+
+.lightbox-group a {
+  text-decoration: none;
+
+}
+
+.lightbox-group img:hover {
+  -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+          transform: scale(0.97);
+  /* Увеличиваем масштаб */
+}
+
+#baguetteBox-overlay {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+#baguetteBox-overlay.visible {
+  opacity: 1;
+}
+
+#baguetteBox-overlay .full-image {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#baguetteBox-overlay .full-image figure {
+  display: inline;
+  margin: 0;
+  height: 100%;
+}
+
+#baguetteBox-overlay .full-image img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+#baguetteBox-overlay .full-image figcaption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1.8;
+  white-space: normal;
+  color: #ccc;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: sans-serif;
+}
+
+#baguetteBox-overlay .full-image:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+
+#baguetteBox-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-transition: left .4s ease, -webkit-transform .4s ease;
+  transition: left .4s ease, -webkit-transform .4s ease;
+  -o-transition: left .4s ease, transform .4s ease;
+  transition: left .4s ease, transform .4s ease;
+  transition: left .4s ease, transform .4s ease, -webkit-transform .4s ease;
+}
+
+#baguetteBox-slider.bounce-from-right {
+  -webkit-animation: bounceFromRight .4s ease-out;
+  animation: bounceFromRight .4s ease-out;
+}
+
+#baguetteBox-slider.bounce-from-left {
+  -webkit-animation: bounceFromLeft .4s ease-out;
+  animation: bounceFromLeft .4s ease-out;
+}
+
+@-webkit-keyframes bounceFromRight {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: -30px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes bounceFromRight {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: -30px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes bounceFromLeft {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 30px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes bounceFromLeft {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 30px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.baguetteBox-button#next-button,
+.baguetteBox-button#previous-button {
+  top: 50%;
+  top: calc(50% - 30px);
+  width: 44px;
+  height: 60px;
+}
+
+.baguetteBox-button {
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 15%;
+  background-color: #323232;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #ddd;
+  font: 1.6em sans-serif;
+  -webkit-transition: background-color .4s ease;
+  -o-transition: background-color .4s ease;
+  transition: background-color .4s ease;
+}
+
+.baguetteBox-button:focus,
+.baguetteBox-button:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+
+.baguetteBox-button#next-button {
+  right: 2%;
+}
+
+.baguetteBox-button#previous-button {
+  left: 2%;
+}
+
+.baguetteBox-button#close-button {
+  top: 20px;
+  right: 2%;
+  right: calc(2% + 6px);
+  width: 30px;
+  height: 30px;
+}
+
+.baguetteBox-button svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*
+      Preloader
+      Borrowed from http://tobiasahlin.com/spinkit/
+  */
+.baguetteBox-spinner {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.baguetteBox-double-bounce1,
+.baguetteBox-double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.baguetteBox-double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes bounce {
+
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.baguetteBox-open{
+  overflow: hidden;
+}
+/* =========================== */
+/* ===== Выпадающий список ===== */
+
+.spoiler_wrap {
+  margin-bottom: 20px;
+
+}
+
+
+
+.spoiler_title {
+  font-weight: 900;
+  font-size: 35px;
+  padding: 10px 15px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color)), to(var(--text-color)));
+  background-image: -o-linear-gradient(bottom, var(--primary-color), var(--text-color));
+  background-image: linear-gradient(to top, var(--primary-color), var(--text-color));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  cursor: pointer;
+
+}
+/*
+.spoiler_title:hover,
+.expanded .spoiler_title {
+  opacity: 0.7;
+}
+*/
+.spoiler_content {
+  display: none;
+}
+
+
+
+.arrow-t {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color)), to(var(--text-color)));
+  background-image: -o-linear-gradient(bottom, var(--primary-color), var(--text-color));
+  background-image: linear-gradient(to top, var(--primary-color), var(--text-color));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.arrow-b {
+  transform: rotate(-180deg);
+}
+/* =========================== */
+/* ===== Кнопка вверх ===== */
+#button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3em;
+  line-height: 50px;
+  color: #ccc;
+}
+
+#button::after {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20em;
+  line-height: 50px;
+}
+#button:hover {
+  cursor: pointer;
+}
+#button:active {
+  background-color: var(--toggle-color);
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.accordion {
+  overflow: hidden;
+  background: var(--sidebar-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 600px) {
+  .accordion {
+    width: 100%;
+  }
+  .accordion-item {
+    display: none;
+  }
+  .accordion-active .accordion-item__label {
+    opacity: 0;
+  }
+}
+.accordion-tabs {
+  display: none;
+}
+.accordion-tabs :focus {
+  outline: none;
+}
+.accordion-item {
+  border-bottom: 1px solid var(--primary-color);
+}
+.accordion-item:last-child {
+  border: none;
+}
+.accordion-item__label {
+  position: relative;
+  margin: 0;
+  padding: 20px;
+  cursor: pointer;
+  transition: padding 0.2s ease;
+  font-size: 24px;
+}
+.accordion-item__label::after {
+  position: absolute;
+  top: -4px;
+  right: 20px;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+  margin: auto;
+  opacity: 1;
+  transition: var(--tran-05);
+}
+.accordion-item__label:hover {
+  background: var(--primary-color);
+}
+.accordion-item__container {
+  height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transition: padding 0.2s ease, opacity 0.5s 0.15s ease;
+}
+
+.accordion-active .accordion-item__label {
+  padding-bottom: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color)), to(var(--text-color)));
+  background-image: -o-linear-gradient(bottom, var(--primary-color), var(--text-color));
+  background-image: linear-gradient(to top, var(--primary-color), var(--text-color));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: inherit;
+  font-size: 24px;
+}
+
+
+.accordion-active .accordion-item__container {
+  height: auto;
+  padding: 20px;
+  opacity: 1;
+  
+}
+.accordion-active .accordion-item__container p,
+.accordion-active .accordion-item__container h1,
+.accordion-active .accordion-item__container h2,
+.accordion-active .accordion-item__container h3,
+.accordion-active .accordion-item__container h4,
+.accordion-active .accordion-item__container h5,
+.accordion-active .accordion-item__container h6 {
+  color: var(--text-color);
+}
+.accordion-active .accordion-item__container p:first-child,
+.accordion-active .accordion-item__container h1:first-child,
+.accordion-active .accordion-item__container h2:first-child,
+.accordion-active .accordion-item__container h3:first-child,
+.accordion-active .accordion-item__container h4:first-child,
+.accordion-active .accordion-item__container h5:first-child,
+.accordion-active .accordion-item__container h6:first-child {
+  margin-top: 0;
+}
+.accordion-active .accordion-item__container p:last-child,
+.accordion-active .accordion-item__container h1:last-child,
+.accordion-active .accordion-item__container h2:last-child,
+.accordion-active .accordion-item__container h3:last-child,
+.accordion-active .accordion-item__container h4:last-child,
+.accordion-active .accordion-item__container h5:last-child,
+.accordion-active .accordion-item__container h6:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .accordion-tabs {
+    display: flex;
+    background: var(--primary-color);
+  }
+  .accordion-tabs .accordion-tab {
+    flex: 1;
+    padding: 20px;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 1;
+    color: var(--text-color);
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+  }
+  .accordion-tabs .accordion-tab:hover {
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+  }
+  .accordion-tabs .accordion-tab:last-child {
+    border-right: 0;
+  }
+  .accordion-tabs .accordion-tab.accordion-active {
+    color: var(--text-color);
+    background: var(--sidebar-color);
+  }
+
+  .accordion-item {
+    display: none;
+    min-height: 260px;
+    padding: 30px;
+    border: none;
+    background: var(--sidebar-color);
+  }
+  .accordion-item__label, .accordion-item__container {
+    padding: 0;
+    transition: inherit;
+  }
+  .accordion-item__label {
+    margin-bottom: 20px;
+  }
+  .accordion-item.accordion-active {
+    display: block;
+  }
+  .accordion-item.accordion-active .accordion-item__container {
+    padding: 0;
+  }
+}
+
+
+
+
+.citation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: var(--citation-bg-color);
+}
+.citation p {
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
+  color: var(--citation-p-color);
+}
+.citation p a {
+  color: var(--citation-a-color);
+  cursor: pointer;
+}
+.citation p a:hover {
+  color: var(--citation-a-hover-color);
+}
+
+
+
+.scroll {
+  overflow: hidden;
+}
+/* -------------------------------- 
+
+xpopup 
+
+-------------------------------- */
+.cd-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(133, 149, 122, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.cd-popup.is-visible {
+  overflow-y: auto;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 5em auto;
+  background: var(--sidebar-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px);
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.text_modal {
+    font-size: 18px;
+    opacity: 1;
+    color: var(--text-color);
+    padding: 10px;
+}
+.cd-popup-container .cd-popup-close {
+  position: absolute;
+  top: 8px;
+  right: -8px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.is-visible .cd-popup-container {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+@media only screen and (min-width: 1170px) {
+  .cd-popup-container {
+    margin: 8em auto;
+  }
+}
+
+/*header_title */
+
+.header_title{
+
+  margin-left: 13px;
+
+}
+.video-thumb-grid {
+  position: relative;
+  font-size: 0;
+  width: calc(70% + 2rem);
+  margin: 0 -1rem;
+}
+.video-banner .video-banner-img {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.video-thumb {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  /* calculate the width, gutters, and aspect ratio */
+  width: calc((100% - 4rem) / 2);
+  height: 0;
+  padding-top: calc(((100% - 4rem) / 2) * 0.5625); /* 16:9 calc */
+  
+  margin: 1rem 1rem; /* gutters */
+  
+  overflow: hidden; /* clipping */
+  
+  position: relative; /* enable positioning for inner content */
+  
+  font-size: 1rem; /* reset the font size */
+  
+  -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+  box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  
+  -webkit-transition: 
+		all 0.2s ease-out 0.05s;
+	transition: 
+		all 0.2s ease-out 0.05s;
+}
+ .video-thumb:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(13,1,61,0.35);
+}
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  
+  /* position inside the 16:9 container */
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* clipping for source images that are letterboxed */
+  object-fit: cover;
+  object-position: 50% 50%;
+  
+  background: #2b2b2b;
+}
+.prezent {
+
+    width: calc(100% + 0.1rem);
+    height: 400px;
+
+}
+
+.underline-one {
+	  color: var(--text-color); /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 900;
+}
+.underline-one:after {
+	  content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: var(--primary-color); /* Цвет подчеркивания при появлении линии*/
+
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: var(--primary-color); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+/* -------------------------------- 
+
+xpopup 
+
+-------------------------------- */
+.cd-popu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(133, 149, 122, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.cd-popu.is-visibl {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-containe {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 5em auto;
+  background: var(--sidebar-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px);
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.text_modal {
+    font-size: 18px;
+    opacity: 1;
+    color: var(--text-color);
+    padding: 10px;
+}
+.cd-popup-containe .cd-popup-clos {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.is-visibl .cd-popup-containe {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+@media only screen and (min-width: 1170px) {
+  .cd-popup-containe {
+    margin: 8em auto;
+  }
+}
