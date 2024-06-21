@@ -1,0 +1,13 @@
+.footer {
+  text-align: center;
+}
+.footer__container {
+  background-color: #77608d;
+  padding: 30px 0px 20px 0px;
+}
+
+@supports (margin-top: clamp(1.875rem, 1.4494680851rem + 2.1276595745vw, 3.75rem)) {
+  .footer {
+    margin-top: clamp(1.875rem, 1.4494680851rem + 2.1276595745vw, 3.75rem);
+  }
+}

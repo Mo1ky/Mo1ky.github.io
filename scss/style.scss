@@ -1,0 +1,78 @@
+// Подключить локальные файлы шрифтов
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html,body {
+    height: 100%;
+    line-height: 1;
+    font-size: 24px; 
+    background-color: #fafafa;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+
+    }
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    font-family: "Inter";
+}
+.main{
+    padding: 30px;
+    flex: 1 1 auto;
+    padding-top: 4.6rem;
+}
+.container {
+	padding: 0px 15px 0px 15px;
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+    @media (min-width: 0) {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 576px) {
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 768px) {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 992px) {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+}
+    }
+
